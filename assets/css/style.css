@@ -108,6 +108,8 @@ button{font-family:inherit;}
   background:var(--red); transform:scaleX(0); transform-origin:left; transition:transform .2s ease;
 }
 .nav a:not(.btn):hover::after{transform:scaleX(1);}
+.nav a.active{color:var(--red);}
+.nav a.active::after{transform:scaleX(1); background:var(--red);}
 .nav-cta{margin-left:.5rem; padding:.65em 1.4em; font-size:.9rem;}
 
 .nav-toggle{
@@ -150,6 +152,96 @@ button{font-family:inherit;}
 .hero-stats li{display:flex; flex-direction:column;}
 .hero-stats strong{font-family:var(--ff-head); font-size:1.6rem; color:#fff;}
 .hero-stats span{font-size:.82rem; color:#b9c6d4;}
+
+/* ---------- Interior page banner ---------- */
+.page-banner{
+  position:relative; color:#fff; overflow:hidden; padding:8.5rem 0 4rem;
+}
+.page-banner-bg{position:absolute; inset:0; background-size:cover; background-position:center; transform:scale(1.05);}
+.page-banner-overlay{
+  position:absolute; inset:0;
+  background:linear-gradient(115deg, rgba(8,26,46,.95) 20%, rgba(14,42,71,.88) 60%, rgba(76,154,42,.45) 100%);
+}
+.page-banner-content{position:relative; z-index:2; max-width:680px;}
+.page-banner-content h1{color:#fff; font-size:clamp(1.9rem,4vw,2.7rem); margin-bottom:.4em;}
+.page-banner-lead{color:#dfe7ef; font-size:1.02rem; margin:0;}
+.page-banner .eyebrow{color:#a9e08a;}
+
+/* ---------- Trust strip (home) ---------- */
+.trust-strip{
+  background:var(--navy-dark); padding:1.8rem 0;
+}
+.trust-strip-inner{
+  display:flex; align-items:center; gap:2rem; flex-wrap:wrap; justify-content:space-between;
+}
+.trust-strip-text{color:#dfe7ef; font-size:.92rem; font-weight:600; display:flex; align-items:center; gap:.6em;}
+.trust-strip-text svg{width:20px; height:20px; fill:var(--green); flex:none;}
+.trust-logos{display:flex; align-items:center; gap:1rem; flex-wrap:wrap;}
+.trust-logos img{
+  height:30px; width:auto; background:#fff; padding:.35rem .6rem; border-radius:8px;
+  display:block;
+}
+
+/* ---------- Branch cards ---------- */
+.branch-grid{display:grid; grid-template-columns:1fr 1fr; gap:1.6rem;}
+.branch-card{
+  background:#fff; border:1px solid var(--grey-100); border-radius:var(--radius);
+  box-shadow:var(--shadow-sm); overflow:hidden; display:flex; flex-direction:column;
+}
+.branch-card-head{
+  padding:1.4rem 1.6rem; background:linear-gradient(120deg, var(--navy), var(--navy-dark)); color:#fff;
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+}
+.branch-card-head h3{color:#fff; margin:0; font-size:1.15rem;}
+.branch-tag{
+  font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em;
+  background:var(--red); padding:.3em .8em; border-radius:999px; white-space:nowrap;
+}
+.branch-card-body{padding:1.6rem; flex:1; display:flex; flex-direction:column; gap:1rem;}
+.branch-detail{display:flex; gap:.8rem; align-items:flex-start;}
+.branch-detail .contact-icon{font-size:1.15rem; flex:none; margin-top:2px;}
+.branch-detail strong{display:block; font-size:.85rem; color:var(--navy);}
+.branch-detail span{font-size:.92rem; color:var(--grey-700);}
+.branch-detail a:hover{color:var(--red);}
+.branch-map{line-height:0; border-top:1px solid var(--grey-100);}
+.branch-map iframe{display:block; width:100%; height:220px; border:0;}
+.branch-actions{display:flex; gap:.8rem; flex-wrap:wrap; margin-top:auto; padding-top:.4rem;}
+
+/* ---------- Partner logos ---------- */
+.partners-grid{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1.4rem;
+}
+.partner-card{
+  background:#fff; border:1px solid var(--grey-100); border-radius:var(--radius);
+  box-shadow:var(--shadow-sm); padding:2rem 1.4rem; display:flex; align-items:center; justify-content:center;
+  min-height:150px; transition:transform .2s ease, box-shadow .2s ease;
+}
+.partner-card:hover{transform:translateY(-4px); box-shadow:var(--shadow);}
+.partner-card img{max-height:76px; max-width:100%; width:auto; object-fit:contain;}
+
+/* ---------- Process steps (claims) ---------- */
+.process-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:1.2rem;}
+.process-step{
+  text-align:center; padding:1.6rem 1rem; background:#fff; border:1px solid var(--grey-100);
+  border-radius:var(--radius); box-shadow:var(--shadow-sm); position:relative;
+}
+.process-step .step-num{
+  width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg, var(--red), var(--red-dark));
+  color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; margin:0 auto .8rem;
+  font-family:var(--ff-head);
+}
+.process-step h4{font-size:.96rem; margin-bottom:.3em;}
+.process-step p{font-size:.84rem; color:var(--grey-700); margin:0;}
+
+/* ---------- Client-type cards (individual / insurance) ---------- */
+.client-types{display:grid; grid-template-columns:1fr 1fr; gap:1.6rem;}
+.client-type-card{
+  padding:2.2rem; border-radius:var(--radius); box-shadow:var(--shadow-sm); border:1px solid var(--grey-100);
+  background:#fff;
+}
+.client-type-card .service-icon{margin-bottom:1.2rem;}
+.client-type-card h3{margin-bottom:.5em;}
+.client-type-card p{color:var(--grey-700); margin:0;}
 
 /* ---------- Sections ---------- */
 .section{padding:5.5rem 0;}
@@ -358,6 +450,10 @@ button{font-family:inherit;}
   .gallery-grid{grid-template-columns:repeat(2,1fr);}
   .ba-grid, .ba-pair{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr 1fr;}
+  .branch-grid{grid-template-columns:1fr;}
+  .partners-grid{grid-template-columns:repeat(2,1fr);}
+  .process-grid{grid-template-columns:repeat(3,1fr);}
+  .client-types{grid-template-columns:1fr;}
 }
 
 @media (max-width: 760px){
@@ -382,6 +478,10 @@ button{font-family:inherit;}
   .about-badge{position:static; margin-top:1rem; max-width:none;}
   .section{padding:3.5rem 0;}
   .contact-form-wrap{padding:1.5rem;}
+  .partners-grid{grid-template-columns:repeat(2,1fr);}
+  .process-grid{grid-template-columns:1fr 1fr;}
+  .page-banner{padding:7rem 0 3rem;}
+  .trust-strip-inner{flex-direction:column; align-items:flex-start;}
 }
 
 @media (min-width: 761px) and (max-width: 980px){

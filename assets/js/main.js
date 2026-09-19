@@ -84,6 +84,8 @@
       var name = (data.get("name") || "").toString().trim();
       var phone = (data.get("phone") || "").toString().trim();
       var vehicle = (data.get("vehicle") || "").toString().trim();
+      var clientType = (data.get("clientType") || "").toString().trim();
+      var branch = (data.get("branch") || "").toString().trim();
       var service = (data.get("service") || "").toString().trim();
       var message = (data.get("message") || "").toString().trim();
 
@@ -92,6 +94,8 @@
         "Name: " + name,
         "Phone: " + phone,
         vehicle ? "Vehicle: " + vehicle : "",
+        clientType ? "Client type: " + clientType : "",
+        branch ? "Preferred branch: " + branch : "",
         service ? "Service needed: " + service : "",
         "",
         "Message:",
@@ -99,7 +103,7 @@
       ].filter(Boolean);
 
       var mailto =
-        "mailto:sparkscarautotune24@gmail.com" +
+        "mailto:info@sparkscarautotune.co.ke" +
         "?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(bodyLines.join("\n"));
 
