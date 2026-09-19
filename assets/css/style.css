@@ -185,7 +185,7 @@ button{font-family:inherit;}
 
 /* ---------- Trust strip (home) ---------- */
 .trust-strip{
-  background:var(--navy-dark); padding:1.8rem 0 2rem; overflow:hidden;
+  background:var(--navy-dark); padding:2.2rem 0 2.4rem; overflow:hidden;
 }
 .trust-strip-text{
   color:#dfe7ef; font-size:.92rem; font-weight:600; display:flex; align-items:center;
@@ -205,12 +205,12 @@ button{font-family:inherit;}
   mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
 .marquee-track{
-  display:flex; align-items:center; gap:2.5rem; width:max-content;
-  animation:marquee-scroll 24s linear infinite;
+  display:flex; align-items:center; gap:3rem; width:max-content;
+  animation:marquee-scroll 70s linear infinite;
 }
 .marquee:hover .marquee-track{animation-play-state:paused;}
 .marquee-track img{
-  height:34px; width:auto; background:#fff; padding:.4rem .8rem; border-radius:8px;
+  height:56px; width:auto; background:#fff; padding:.65rem 1.15rem; border-radius:10px;
   display:block; flex:none;
 }
 @keyframes marquee-scroll{
