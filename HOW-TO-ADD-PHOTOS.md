@@ -1,19 +1,19 @@
 # Adding gallery photos (no code required)
 
-This folder structure goes inside the `media` subdomain you created in cPanel
-(`media.sparkscarautotune.co.ke`), in its document root — the same folder
-shown when you set up the subdomain (usually `public_html/media`).
+This folder structure goes inside the `images` subdomain you created in cPanel
+(`images.sparkscarautotune.co.ke`), in its document root — the same folder
+shown when you set up the subdomain.
 
 ## One-time setup
 
-1. In cPanel **File Manager**, open the `media` folder (the subdomain's document root).
+1. In cPanel **File Manager**, open the `images` folder (the subdomain's document root).
 2. Upload `.htaccess` into that folder (this file — enables the website to read from here).
 3. Create a folder inside it called `gallery`.
-4. Upload `gallery.json` into the `media` folder (NOT inside `gallery/` — it stays at the top level, next to the `gallery` folder).
+4. Upload `gallery.json` into the `images` folder (NOT inside `gallery/` — it stays at the top level, next to the `gallery` folder).
 
 You should end up with:
 ```
-media/                  (document root of the subdomain)
+images/                  (document root of the subdomain)
 ├── .htaccess
 ├── gallery.json
 └── gallery/
