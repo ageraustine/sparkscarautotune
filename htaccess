@@ -1,0 +1,20 @@
+# Upload this file to the ROOT of the media subdomain
+# (the same folder shown as "Document Root" when you created the subdomain,
+# e.g. public_html/media)
+#
+# It allows the main website (hosted on GitHub Pages) to fetch the
+# gallery.json file and images from this subdomain. Without this,
+# browsers will silently block the gallery from loading.
+
+<IfModule mod_headers.c>
+  Header set Access-Control-Allow-Origin "*"
+  Header set Access-Control-Allow-Methods "GET, OPTIONS"
+</IfModule>
+
+# Optional but recommended: stop browsers/CDNs from caching gallery.json
+# for too long, so new entries you add show up quickly.
+<IfModule mod_headers.c>
+  <FilesMatch "gallery\.json$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>

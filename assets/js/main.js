@@ -85,7 +85,7 @@
   /* ---------- Dynamic gallery (before/after pairs from cPanel-hosted JSON) ---------- */
   var dynamicGallery = document.getElementById("dynamicGallery");
   if (dynamicGallery) {
-    var GALLERY_JSON_URL = "https://media.sparkscarautotune.co.ke/gallery/gallery.json";
+    var GALLERY_JSON_URL = "https://images.sparkscarautotune.co.ke/gallery/gallery.json";
 
     function escapeHtml(str) {
       return String(str || "").replace(/[&<>"']/g, function (ch) {
