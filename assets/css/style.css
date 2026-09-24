@@ -426,6 +426,14 @@ button{font-family:inherit;}
   font-size:.72rem; font-weight:700; text-transform:uppercase; padding:.35em .8em; border-radius:999px;
 }
 
+.gallery-status{
+  text-align:center; color:var(--grey-700); padding:3rem 1rem; font-size:1rem;
+}
+.gallery-status-error{color:var(--red);}
+.gallery-status-error a{text-decoration:underline;}
+#dynamicGallery .ba-grid{margin-top:0;}
+#dynamicGallery .ba-grid .ba-slider{margin-bottom:.5rem;}
+
 /* ---------- Tagline strip ---------- */
 .tagline-strip{
   background:linear-gradient(120deg, var(--red-dark), var(--red) 45%, var(--green-dark));
